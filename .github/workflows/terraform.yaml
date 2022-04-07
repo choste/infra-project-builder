@@ -1,11 +1,18 @@
 on:
   push:
-    
+
 jobs:
   terraform:
+    permissions:
+      contents: 'read'
+      id-token: 'write'
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v3
+    - uses: 'google-github-actions/auth@v0'
+      with:
+        workload_identity_provider: 'projects/1044113934713/locations/global/workloadIdentityPools/my-pool/providers/my-provider'
+        service_account: 'my-service-account@builds-334818.iam.gserviceaccount.com'
     - uses: hashicorp/setup-terraform@v1
     - name: Terraform fmt
       id: fmt
