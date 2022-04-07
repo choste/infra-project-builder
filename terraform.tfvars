@@ -1,2 +1,2 @@
 project = "choste"
-region = "us-west1"
+region  = "us-west1"
