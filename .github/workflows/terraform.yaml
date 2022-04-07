@@ -61,6 +61,16 @@ jobs:
             \`\`\`\n
             ${process.env.PLAN}
             \`\`\`
+            
+            </details>
+            
+            #### Checkov Results :mag_right:\`${{ steps.checkov.outcome }}\`
+            
+            <details><summary>Show Checkov Results</summary>
+            
+            \`\`\`\n
+            ${ process.env.CHECKOV_RESULTS }
+            \`\`\`
 
             </details>
 
