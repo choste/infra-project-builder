@@ -18,6 +18,10 @@ jobs:
         service_account: 'my-service-account@builds-334818.iam.gserviceaccount.com'
     - uses: hashicorp/setup-terraform@v1
 
+    - name: Terraform init
+      id: init
+      run: terraform init
+
     - name: Terraform Destroy
       id: Destroy
       run: terraform destroy -auto-approve
