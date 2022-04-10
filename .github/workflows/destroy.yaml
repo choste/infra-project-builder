@@ -1,8 +1,7 @@
-name: Deploy
+name: Destroy
 
 on:
-  push:
-    branches: [main]
+  workflow_dispatch:
 
 jobs:
   terraform:
@@ -19,18 +18,6 @@ jobs:
         service_account: 'my-service-account@builds-334818.iam.gserviceaccount.com'
     - uses: hashicorp/setup-terraform@v1
 
-    - name: Terraform fmt
-      id: fmt
-      run: terraform fmt -check
-
-    - name: Terraform Init
-      id: init
-      run: terraform init
-
-    - name: Terraform Validate
-      id: Validate
-      run: terraform validate -no-color
-
-    - name: Terraform Apply
-      id: Apply
-      run: terraform apply -auto-approve
+    - name: Terraform Destroy
+      id: Destroy
+      run: terraform destroy -auto-approve
