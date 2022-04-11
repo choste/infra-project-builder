@@ -35,7 +35,6 @@ resource "google_container_cluster" "primary" {
 
   remove_default_node_pool = true
   initial_node_count       = 1
-  min_master_version       = 1.12
 
   network    = google_compute_network.vpc.name
   subnetwork = google_compute_subnetwork.subnet.name
@@ -48,7 +47,7 @@ resource "google_container_cluster" "primary" {
   private_cluster_config {
     enable_private_nodes    = true
     enable_private_endpoint = false
-    master_ipv4_cidr_block  = "10.0.0.0/28"
+    master_ipv4_cidr_block  = "10.1.0.0/28"
     master_global_access_config {
       enabled = true
     }
