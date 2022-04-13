@@ -30,6 +30,7 @@ resource "google_container_cluster" "primary" {
   #checkov:skip=CKV_GCP_19:False Positive
   #checkov:skip=CKV_GCP_20:No authorized networks yet
   #checkov:skip=CKV_GCP_24:False Positive
+  count    = var.create_cluster ? 1 : 0
   name     = "${var.project}-gke"
   location = var.region
 
@@ -80,9 +81,10 @@ resource "google_container_cluster" "primary" {
 }
 
 resource "google_container_node_pool" "primary_nodes" {
-  name       = "${google_container_cluster.primary.name}-node-pool"
+  count      = var.create_cluster ? 1 : 0
+  name       = "${google_container_cluster.primary[0].name}-node-pool"
   location   = var.region
-  cluster    = google_container_cluster.primary.name
+  cluster    = google_container_cluster.primary[0].name
   node_count = 1
 
   management {

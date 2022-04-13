@@ -5,3 +5,7 @@ variable "project" {
 variable "region" {
   type = string
 }
+
+variable "create_cluster" {
+  type = bool
+}
