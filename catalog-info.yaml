@@ -4,7 +4,7 @@ metadata:
   name: project-builder
   description: Create test projects
   tags:
-    - HCL
+    - hcl
 spec:
   type: website
   lifecycle: production
