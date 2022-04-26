@@ -1,0 +1,12 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: project-builder
+  description: Create test projects
+  tags:
+    - HCL
+spec:
+  type: website
+  lifecycle: production
+  owner: choste
+  system: infra
