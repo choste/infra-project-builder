@@ -3,6 +3,8 @@ kind: Component
 metadata:
   name: project-builder
   description: Create test projects
+  annotations:
+    backstage.io/techdocs-ref: dir:.
   tags:
     - hcl
 spec:
