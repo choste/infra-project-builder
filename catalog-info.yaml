@@ -5,6 +5,7 @@ metadata:
   description: Create test projects
   annotations:
     backstage.io/techdocs-ref: dir:.
+    github.com/project-slug: choste/infra-project-builder
   tags:
     - hcl
 spec:
