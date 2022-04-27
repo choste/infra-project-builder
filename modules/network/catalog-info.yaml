@@ -1,8 +1,8 @@
 apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
-  name: project-builder
-  description: Create test projects
+  name: module-network
+  description: Create VPC, Subnet and IP aliases
   tags:
     - hcl
 spec:
