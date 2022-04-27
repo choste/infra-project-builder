@@ -1,8 +1,8 @@
 module "network" {
-    source = "./modules/network"
+  source = "./modules/network"
 
-    project = var.project
-    region = var.region
+  project = var.project
+  region  = var.region
 }
 
 resource "google_container_cluster" "primary" {

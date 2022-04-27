@@ -9,3 +9,4 @@ spec:
   type: library
   lifecycle: experimental
   owner: choste
+  subcomponentOf: project-builder
