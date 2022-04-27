@@ -6,7 +6,7 @@ metadata:
   tags:
     - hcl
 spec:
-  type: website
+  type: infra
   lifecycle: production
   owner: choste
-  system: infra
+  system: ops
